@@ -13,53 +13,53 @@
 
     单向单笔设置方法：
     空单入场
-    {\"robot_id\":\"55450152\",\"side\":\"sell\"}
+    {\"robot_id\":\"55445152\",\"side\":\"sell\"}
     多单入场
-    {\"robot_id\":\"55450152\",\"side\":\"buy\"}
+    {\"robot_id\":\"55445152\",\"side\":\"buy\"}
     市价全平
-    {\"robot_id\":\"55450152\",\"side\":\"TP\"}
+    {\"robot_id\":\"55445152\",\"side\":\"TP\"}
 
 
 单向两笔设置方法：
     第一空单
-    {\"robot_id\":\"55450152\",\"side\":\"sell\",\"identifier\":\"S_1\"}
+    {\"robot_id\":\"55445152\",\"side\":\"sell\",\"identifier\":\"S_1\"}
     第二空单
-    {\"robot_id\":\"55450152\",\"side\":\"sell\",\"identifier\":\"S_2\"}
+    {\"robot_id\":\"55445152\",\"side\":\"sell\",\"identifier\":\"S_2\"}
     第一多单
-    {\"robot_id\":\"55450152\",\"side\":\"buy\",\"identifier\":\"L_1\"}
+    {\"robot_id\":\"55445152\",\"side\":\"buy\",\"identifier\":\"L_1\"}
     第二多单
-    {\"robot_id\":\"55450152\",\"side\":\"buy\",\"identifier\":\"L_2\"}
+    {\"robot_id\":\"55445152\",\"side\":\"buy\",\"identifier\":\"L_2\"}
     第一空单平仓
-    {\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_S_1\"}
+    {\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_S_1\"}
     第二空单平仓
-    {\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_S_2\"}
+    {\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_S_2\"}
     第一多单平仓
-    {\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_L_1\"}
+    {\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_L_1\"}
     第二多单平仓
-    {\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_L_2\"}
+    {\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_L_2\"}
 
 示例
 
     if long
 
-        strategy.entry("L_1", strategy.long, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55450152\",\"side\":\"buy\",\"identifier\":\"L_1\"}")
+        strategy.entry("L_1", strategy.long, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55445152\",\"side\":\"buy\",\"identifier\":\"L_1\"}")
 
-        strategy.entry("L_2", strategy.long, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55450152\",\"side\":\"buy\",\"identifier\":\"L_2\"}")
+        strategy.entry("L_2", strategy.long, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55445152\",\"side\":\"buy\",\"identifier\":\"L_2\"}")
 
     if short
 
-        strategy.entry("S_1", strategy.short, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55450152\",\"side\":\"sell\",\"identifier\":\"S_1\"}")
+        strategy.entry("S_1", strategy.short, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55445152\",\"side\":\"sell\",\"identifier\":\"S_1\"}")
 
-        strategy.entry("S_2", strategy.short, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55450152\",\"side\":\"sell\",\"identifier\":\"S_2\"}")
+        strategy.entry("S_2", strategy.short, when=ACT_BT and testPeriod,alert_message="{\"robot_id\":\"55445152\",\"side\":\"sell\",\"identifier\":\"S_2\"}")
 
 
-    strategy.exit("TP-1_L", "L_1", profit = (abs((last_open_longCondition   *       (1+(tp/100)))-last_open_longCondition)/syminfo.mintick),    loss = (abs((last_open_longCondition    *   (1-(sl/100)))-last_open_longCondition)/syminfo.mintick  ),alert_message="{\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_L_1\"}")
+    strategy.exit("TP-1_L", "L_1", profit = (abs((last_open_longCondition   *       (1+(tp/100)))-last_open_longCondition)/syminfo.mintick),    loss = (abs((last_open_longCondition    *   (1-(sl/100)))-last_open_longCondition)/syminfo.mintick  ),alert_message="{\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_L_1\"}")
 
-    strategy.exit("TP-2_S", "S_2", profit = (abs((last_open_shortCondition  *       (1-(tp2/100)))-last_open_shortCondition)/syminfo.mintick),  loss = (abs((last_open_shortCondition   *   (1+(sl/100)))-last_open_shortCondition)/syminfo.mintick ),alert_message="{\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_S_2\"}")
+    strategy.exit("TP-2_S", "S_2", profit = (abs((last_open_shortCondition  *       (1-(tp2/100)))-last_open_shortCondition)/syminfo.mintick),  loss = (abs((last_open_shortCondition   *   (1+(sl/100)))-last_open_shortCondition)/syminfo.mintick ),alert_message="{\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_S_2\"}")
 
-    strategy.exit("TP-1_S", "S_1", profit = (abs((last_open_shortCondition  *       (1-(tp/100)))-last_open_shortCondition)/syminfo.mintick),   loss = (abs((last_open_shortCondition   *   (1+(sl/100)))-last_open_shortCondition)/syminfo.mintick ),alert_message="{\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_S_1\"}")
+    strategy.exit("TP-1_S", "S_1", profit = (abs((last_open_shortCondition  *       (1-(tp/100)))-last_open_shortCondition)/syminfo.mintick),   loss = (abs((last_open_shortCondition   *   (1+(sl/100)))-last_open_shortCondition)/syminfo.mintick ),alert_message="{\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_S_1\"}")
 
-    strategy.exit("TP-2_L", "L_2", profit = (abs((last_open_longCondition   *       (1+(tp2/100)))-last_open_longCondition)/syminfo.mintick),   loss = (abs((last_open_longCondition    *   (1-(sl/100)))-last_open_longCondition)/syminfo.mintick  ),alert_message="{\"robot_id\":\"55450152\",\"side\":\"TP\",\"identifier\":\"TP_L_2\"}")
+    strategy.exit("TP-2_L", "L_2", profit = (abs((last_open_longCondition   *       (1+(tp2/100)))-last_open_longCondition)/syminfo.mintick),   loss = (abs((last_open_longCondition    *   (1-(sl/100)))-last_open_longCondition)/syminfo.mintick  ),alert_message="{\"robot_id\":\"55445152\",\"side\":\"TP\",\"identifier\":\"TP_L_2\"}")
 
 7、创建警报
     webhook URL

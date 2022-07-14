@@ -63,6 +63,6 @@
 
 7、创建警报
     webhook URL
-    http://18.163.207.187/webhook
+    http://www.okbi.com/webhook
     消息体
     {{strategy.order.alert_message}}

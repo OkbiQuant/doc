@@ -11,7 +11,7 @@
 yum -y install wget
 
 下载托管者：
-wget https://github.com/Okquant/OKTVbot/releases/download/v1.0.7/okbibot
+wget https://github.com/Okquant/OKTVbot/releases/download/v1.0.8/okbibot
 打开托管者权限
 chmod 777 okbibot
 
